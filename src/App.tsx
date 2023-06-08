@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import EligibleCustomersList from './EligibleCustomersList';
+import NotEligibleCustomersList from './NotEligibleCustomersList';
+import ExistingEligibleCustomersList from './ExitsingEligibleCustomersList';
 
-function App() {
+
+const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="container">
+        <div className="EligibleCustomersList">
+          <a>Eligible Customers</a>
+          <EligibleCustomersList/>
+        </div>
+        <div className="NotEligibleCustomersList">
+          <a>Not Eligible Customers</a>
+          <NotEligibleCustomersList/>
+        </div>
+        <div className="ExistingEligibleCustomersList">
+          <a>Existing Eligible Customers</a>
+          <ExistingEligibleCustomersList/>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
